@@ -1,0 +1,435 @@
+@todo_label_width: 80px;
+@todo_field_width: 80px;
+
+@box_background: aliceblue;
+@box_color: black;
+
+label.on-top {
+    display: block;
+    margin-bottom: 0;
+}
+
+.page {
+    max-width: 1200px;
+    min-width: 1030px;
+    margin: auto;
+    background: beige;
+    padding: 10px;  
+}
+
+.login-page {
+    max-width: 300px;
+    margin: auto;
+    margin-top: 40px;}
+
+.login-text {
+    padding: 7px;
+    border-radius: 3px;
+    width: 225px;
+}
+
+.login-line {
+    margin-top: 10px;
+}
+
+.forgot-password {
+    font-size: .8em;
+}
+
+.orders-header {
+    max-width: 1200px;
+    min-width: 1030px;
+    margin: auto;
+    padding: 10px;  
+}
+
+
+.readonly {
+    background-color: lightblue;
+    padding-left: 5px;
+}
+
+.two-col {
+    display: inline-block;
+    width: 45%;
+    margin-left: 5%;
+}
+
+.input-control {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.btn-small {
+    font-size: .9em;
+    margin-left: 10px;
+}
+
+.field-box {
+    width: @todo_label_width + @todo_field_width ;
+    margin-bottom: 10px;
+}
+
+.ts-page {
+    max-width: 1200px;
+    min-width: 1030px;
+    margin: auto;
+    padding: 10px;  
+}
+
+.todo-label {
+    display: inline-block; 
+    width: @todo_label_width;
+}
+
+.todo-field {
+    display: inline-block;
+    width: @todo_field_width;
+    padding: 5px;
+    .readonly;
+    .input-control
+}
+
+.select-proj {
+    width: 150px;
+    height: 28px;
+}
+
+.button-up-col {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+}
+
+
+.ts-daypicker {
+    position: relative;
+    width: 320px;
+    text-align: center;
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+.create-daypicker {
+    position: relative;
+    width: 320px;
+}
+
+.DayPicker {
+    width: 215px;
+    margin: auto;
+}
+
+#open-daypicker {
+    margin-left: 6px;
+}
+
+.day-picker-dd {
+    z-index: 37;
+    position: absolute;
+    left: 1%;
+    margin: auto;
+    right: 0;
+    width: 100%;
+    top: 47px;
+    background: white;
+    border: solid 2px brown;
+}
+.ts-stats {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
+
+.ts-entry-box {
+    display: inline-block;
+    vertical-align: top;
+    background: @box_background;
+    border: solid 1px lightgray;
+    color: @box_color;
+    max-width: 320px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box-color {
+    color: @box_color;
+}
+
+.time-text {
+    height: 44px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 48px;
+}
+
+.tbl-todo {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.tbl-col {
+    display: inline-block;
+    padding: 5px;
+}
+
+.tbl-col-hdr {
+    .tbl-col;
+    font-weight: bold;
+}
+
+.row-todo {
+    margin-bottom: 5px;
+    border-bottom: solid 1px lightgray;
+}
+.row-todo:hover {
+    color: white;
+    background-color: black;
+}
+
+.alert-row {
+    background: lightpink;
+}
+.success-row {
+    background: lawngreen;
+}
+.col-todo-1 {
+    width: 14%
+}
+.col-todo-2 {
+    width: 46%
+}
+.col-todo-3 {
+    width: 6%
+}
+.col-todo-4 {
+    width: 6%
+}
+.col-todo-5 {
+    width: 6%
+}
+.col-todo-6 {
+    width: 8%
+}
+.col-todo-7 {
+    width: 10%
+}
+
+
+.col-inv-1 {
+    width: 17%;
+}
+.col-inv-2 {
+    width: 6%
+}
+.col-inv-3 {
+    width: 10%
+}
+.col-inv-4 {
+    width: 15%
+}
+.col-inv-5 {
+    width: 15%
+}
+.col-inv-6 {
+    width: 5%
+}
+.col-inv-7 {
+    width: 15%;
+}
+
+
+#ts_id {
+    display: inline-block;
+    width: 60px;
+    margin-left: 40px;
+}
+
+.todo-day {
+    padding: 10px;
+    border-radius: 4px;
+    background: aliceblue;
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.invoice-day {
+    padding-left: 10px;
+    border-radius: 4px;
+    background: aliceblue;
+    width: 200px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.create-select {
+    width: 200px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.create-fields {
+    background: aliceblue;
+    padding: 15px;
+}
+
+
+#invoice-header label {
+    width: 130px
+}
+
+#invoice-header input {
+    color: blue;
+    background: transparent;
+    border: none;
+}
+
+#invoice-header .hdr-block {
+    background: beige;
+    padding: 10px;
+}
+
+.status-filter .status-buttons {
+    margin-right: 3px;
+    width: 60px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.status-buttons.off  {
+    .btn;
+    color: #3ca1b7;
+    background-color: white;
+    border: solid 2px #3ca1b7;
+}
+
+.status-buttons.on  {
+    .btn;
+    color: white;
+    background-color: #3ca1b7;
+    
+    
+}
+
+.order-view .fld 
+{
+    display: inline-block;
+}
+
+.order-view .fld1 
+{
+    font-weight: bold;
+    width: 130px;
+    margin-bottom: 5px;
+}
+
+.order-view .fld2
+{
+    font-weight: normal;
+}
+
+.order-view button {
+    width: 90px;
+}
+
+
+.input-scan {
+    font-size: 2em;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.tracking-page .line {
+    margin-bottom: 20px;
+}
+
+
+
+.ts-daypicker {
+    position: relative;
+    width: 320px;
+    text-align: center;
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+.create-daypicker {
+    position: relative;
+    width: 320px;
+}
+
+.DayPicker {
+    width: 215px;
+    margin: auto;
+}
+
+#open-daypicker {
+    margin-left: 6px;
+}
+
+.day-picker-dd {
+    z-index: 37;
+    position: absolute;
+    left: 1%;
+    margin: auto;
+    right: 0;
+    width: 100%;
+    top: 47px;
+    background: white;
+    border: solid 2px brown;
+}
+
+.col-hot-1 {
+    width: 22.5%;
+}
+.col-hot-2 {
+    width: 22.5%;
+}
+.col-hot-3 {
+    width: 22.5%;
+}
+.col-hot-4 {
+    width: 22.5%;
+}
+.col-hot-5 {
+    width: 10%;
+}
+
+
+.hotfolder-view {
+    font-size: 1.3em;
+}
+
+.hotfolder-view .field-row {
+    margin-bottom: 5px;
+}
+
+.hotfolder-text {
+    width: 100%;
+    padding: 5px;
+}
