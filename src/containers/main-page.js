@@ -4,6 +4,7 @@ import React from 'react';
 
 import * as utils from '../utils';
 
+
 import { Alert, Button } from 'react-bootstrap';
 import { loginUser, dismissAlerts } from '../actions/userActions';
 
@@ -82,25 +83,65 @@ class LoginPage extends React.Component {
                     </Alert>: '';
         return (
 
-            <div className="login-page">
+            <div className="main-page">
                <form onSubmit={this.onLoginButtonClick.bind(this)}>
-               <div><h2>Studio Mor Login</h2></div>
-               <div className="login-line">
-                   <div>Email</div>
-                   <div><input type="email"  className="login-text" onChange={this.onEmailChange.bind(this)} value={this.state.email} /></div>
-               </div>
-               <div className="login-line">
-                   <div>Password</div>
-                   <div><input type="password"  className="login-text" onChange={this.onPasswordChange.bind(this)}  value={this.state.password} /></div>
-               </div>
 
-               <div style={{marginTop: '20px'}}>
-                   <Button type="submit"  bsStyle="primary" style={{width: '225px', height: '45px'}}   disabled={!is_input_valid}>Login</Button>
+                <div>
+
+                    <div className="customer-logo col-sm-3"></div>
+                    <div className="rotemar-title col-sm-6">
+                        <div>
+                            <div className="rmri-title">RMRI
+                                <div className="tm-title">TM</div>
+                            </div>
+                            
+                        </div>
+                        <div className="slogan-title">Marketing Decisions Made Better.</div>
+                        
+                    </div>
+                    <div className="rotemar-logo col-sm-3"></div>
+                    <div style={{clear: "both"}}></div>
                 </div>
-               <div><a className="forgot-password" href="Forgot password">Forgot password</a></div>
-               <div style={{marginTop: '20px'}}>
-                   {alert_element}
-               </div>
+
+                <hr className="section-divider" />
+
+                <div>
+                    <div className="col-sm-4">
+                        <div className="tbl-header">משתני התמהיל</div>
+                        <div className="green-cell">טלוויזיה - קשת</div>
+                        <div className="green-cell">טלוויזיה - רשת</div>
+                        <div className="green-cell">טלוויזיה - ערוץ 10</div>
+                        <div className="yellow-cell">Google Adwords</div>
+                        <div className="yellow-cell">Facebook</div>
+                        <div className="yellow-cell">Youtube</div>
+                        <div className="yellow-cell">Banners</div>
+                        <div className="yellow-cell">Outbrain/Taboola</div>
+                        <div className="yellow-cell">Remarketing</div>
+                        <div className="blue-cell">שילוט חוצות</div>
+                        <div className="blue-cell">חסויות</div>
+                        <div className="blue-cell">עיתונות מודפסות</div>
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="tbl-header">תקציב (באלפי ₪)</div>
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
+                    </div>
+                    <div className="col-sm-4">
+                        <div className="tbl-header">RMRI index</div>
+                        
+                    </div>
+                </div>
+
                </form>
             </div>
         );
