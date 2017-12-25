@@ -5,7 +5,7 @@ import React from 'react';
 import * as utils from '../utils';
 
 
-import { Alert, Button } from 'react-bootstrap';
+import { Alert, Button, ProgressBar } from 'react-bootstrap';
 import { loginUser, dismissAlerts } from '../actions/userActions';
 
 
@@ -81,6 +81,9 @@ class LoginPage extends React.Component {
                     <Alert bsStyle="danger" onDismiss={this.onAlertDismiss.bind(this)}>
                         {this.props.user.alerts[0].msg}
                     </Alert>: '';
+
+        const rmri_indexes = [43, 23, 28, 54, 143, 3, 5, 2, 12, 23, -2, 2, 32, 18, 7, 60, 4];
+        const max_index = 143;
         return (
 
             <div className="main-page">
@@ -103,45 +106,130 @@ class LoginPage extends React.Component {
                     <div style={{clear: "both"}}></div>
                 </div>
 
-                <hr className="section-divider" />
+                <div className="main-tbl">
+                    
+                    
 
-                <div>
-                    <div className="col-sm-4">
-                        <div className="tbl-header">משתני התמהיל</div>
-                        <div className="green-cell">טלוויזיה - קשת</div>
-                        <div className="green-cell">טלוויזיה - רשת</div>
-                        <div className="green-cell">טלוויזיה - ערוץ 10</div>
-                        <div className="yellow-cell">Google Adwords</div>
-                        <div className="yellow-cell">Facebook</div>
-                        <div className="yellow-cell">Youtube</div>
-                        <div className="yellow-cell">Banners</div>
-                        <div className="yellow-cell">Outbrain/Taboola</div>
-                        <div className="yellow-cell">Remarketing</div>
-                        <div className="blue-cell">שילוט חוצות</div>
-                        <div className="blue-cell">חסויות</div>
-                        <div className="blue-cell">עיתונות מודפסות</div>
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="tbl-header">תקציב (באלפי ₪)</div>
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                        <div className="white-cell"><input type="text" className="input-var" /></div>                        
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="tbl-header">RMRI index</div>
+                        <div className="my-row">
+                            <div className="tbl-header my-col">משתני התמהיל</div>
+                            <div className="tbl-header my-col">תקציב (באלפי ₪)</div>
+                            <div className="tbl-header my-col">RMRI index</div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                        <div className="my-row ">
+                            <div className="my-col green">טלוויזיה - קשת</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[0]/max_index*100} label={rmri_indexes[0]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col green">טלוויזיה - רשת</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="warning" now={rmri_indexes[1]/max_index*100} label={rmri_indexes[1]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col green">טלוויזיה - ערוץ 10</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="danger" now={rmri_indexes[2]/max_index*100} label={rmri_indexes[2]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col yellow">Google Adwords</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[3]/max_index*100} label={rmri_indexes[3]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col yellow">Facebook</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="success" now={rmri_indexes[4]/max_index*100} label={rmri_indexes[4]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col yellow">Youtube</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[5]/max_index*100} label={rmri_indexes[5]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                        
+                         <div className="my-row ">
+                            <div className="my-col yellow">Banners</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[6]/max_index*100} label={rmri_indexes[6]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col yellow">Outbrain/Taboola</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[7]/max_index*100} label={rmri_indexes[7]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col yellow">Remarketing</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[8]/max_index*100} label={rmri_indexes[8]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col blue">שילוט חוצות</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[9]/max_index*100} label={rmri_indexes[9]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col blue">חסויות</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[10]/max_index*100} label={rmri_indexes[10]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col blue">עיתונות מודפסות</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[11]/max_index*100} label={rmri_indexes[11]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                        
+                         <div className="my-row">
+                            <div className="tbl-header my-col">משתנים נוספים</div>
+                            <div className="tbl-header my-col"></div>
+                            <div className="tbl-header my-col"></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+    
+                         <div className="my-row ">
+                            <div className="my-col beige">קריאיטיב: זמרות</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[12]/max_index*100} label={rmri_indexes[12]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col beige">קריאיטיב: שף מפורסם</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[13]/max_index*100} label={rmri_indexes[13]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col beige">קמפיין קריאטיב: מסר ישיר</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[14]/max_index*100} label={rmri_indexes[14]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col beige">קמפיין מתחרים</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[15]/max_index*100} label={rmri_indexes[15]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
+                         <div className="my-row ">
+                            <div className="my-col beige">משתנים נוספים</div>
+                            <div className="my-col"><input type="text" className="input-var" /></div>
+                            <div className="my-col"> <ProgressBar bsStyle="info" now={rmri_indexes[16]/max_index*100} label={rmri_indexes[16]} /></div>
+                            <div style={{ clear: "both"}}></div>
+                        </div>
                         
                     </div>
-                </div>
-
+               
                </form>
             </div>
         );
