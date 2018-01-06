@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 import Header from '../components/Header';
 import MainPage from './main-page';
-import EnsureLoggedInContainer from './EnsureLoggedInContainer';
+
 import { isLoggedIn } from '../utils';
 
 import { connect } from 'react-redux';

@@ -1,4 +1,4 @@
 import axios from "axios";
 
-const config = require('../config.js');
+const config = require('./config.js');
 
